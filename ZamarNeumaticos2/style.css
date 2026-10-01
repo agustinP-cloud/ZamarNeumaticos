@@ -1,0 +1,609 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #0d0d0d;
+    color: #ffffff;
+
+    min-height: 100vh;
+}
+
+
+/* =========================
+   MENÚ LATERAL
+========================= */
+
+.sidebar {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 210px;
+    height: 100vh;
+
+    background-color: #0a0a0a;
+
+    border-right: 1px solid #242424;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 10px;
+}
+
+.logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.menu {
+    padding-top: 10px;
+}
+
+.menu-item {
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 15px;
+
+    color: #777;
+
+    text-decoration: none;
+
+    border-left: 3px solid transparent;
+
+    transition: 0.2s;
+}
+
+.menu-item span {
+    width: 25px;
+
+    font-size: 15px;
+}
+
+.menu-item p {
+    font-size: 13px;
+}
+
+
+/* ITEM ACTIVO */
+
+.menu-item.activo {
+    background-color: #1c1c1c;
+
+    color: #ffffff;
+
+    border-left: 3px solid #ffd900;
+}
+
+.menu-item:hover {
+    background-color: #181818;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   USUARIO
+========================= */
+
+.usuario {
+    margin-top: auto;
+
+    padding: 15px;
+
+    border-top: 1px solid #242424;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.usuario strong {
+    font-size: 12px;
+}
+
+.usuario span {
+    color: #c8a900;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    margin-top: 3px;
+}
+
+.usuario button,
+.usuario .boton-salir {
+    display: block;
+
+    margin-top: 15px;
+
+    background: none;
+
+    border: none;
+
+    color: #777;
+
+    text-align: left;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+.usuario .boton-salir:hover {
+    color: #ffd900;
+}
+
+
+/* =========================
+   CONTENIDO PRINCIPAL
+========================= */
+
+.main {
+    margin-left: 210px;
+
+    min-height: 100vh;
+}
+
+
+/* =========================
+   BARRA SUPERIOR
+========================= */
+
+.topbar {
+    height: 70px;
+
+    border-bottom: 1px solid #242424;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 25px;
+}
+
+.titulo-sistema {
+    color: #777;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+.fecha {
+    color: #777;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.contenido {
+    padding: 25px;
+}
+
+.encabezado span {
+    color: #777;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+.encabezado h1 {
+    font-size: 28px;
+
+    margin-top: 5px;
+
+    letter-spacing: -1px;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+.tarjetas {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.tarjeta {
+    min-height: 108px;
+
+    border: 1px solid #292929;
+
+    background-color: #111111;
+
+    padding: 20px;
+}
+
+.tarjeta span {
+    display: block;
+
+    color: #777;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.tarjeta strong {
+    display: block;
+
+    font-size: 24px;
+
+    margin-top: 12px;
+}
+
+.tarjeta small {
+    display: block;
+
+    color: #666;
+
+    font-size: 9px;
+
+    margin-top: 7px;
+}
+
+
+/* =========================
+   FILA DE INFORMACIÓN
+========================= */
+
+.fila-info {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 12px;
+
+    margin-top: 12px;
+}
+
+
+/* =========================
+   PANELES
+========================= */
+
+.panel {
+    border: 1px solid #292929;
+
+    background-color: #111111;
+}
+
+.panel.grande,
+.panel.stock {
+    height: 130px;
+}
+
+.panel-titulo {
+    padding: 20px;
+
+    color: #777;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.panel-vacio {
+    height: calc(100% - 50px);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #555;
+
+    font-size: 11px;
+}
+
+.alerta {
+    color: #888;
+}
+
+.alerta:first-letter {
+    color: #ffd900;
+}
+
+
+/* =========================
+   VENTAS
+========================= */
+
+.ventas {
+    height: 125px;
+
+    margin-top: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fila-info {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        width: 170px;
+    }
+
+    .main {
+        margin-left: 170px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar {
+        padding: 0 15px;
+    }
+
+    .fecha {
+        display: none;
+    }
+
+}
+
+/* =========================
+   FORMULARIO DE STOCK
+========================= */
+
+.formulario-stock {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+
+    margin-top: 15px;
+}
+
+.formulario-stock label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #777;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.formulario-stock input {
+    width: 100%;
+    height: 38px;
+
+    padding: 0 10px;
+
+    background-color: #0b0b0b;
+
+    border: 1px solid #303030;
+
+    color: white;
+
+    outline: none;
+}
+
+.formulario-stock input:focus {
+    border-color: #ffd900;
+}
+
+.formulario-stock button {
+    grid-column: 1 / -1;
+
+    height: 40px;
+    margin-top: 5px;
+
+    background-color: #ffd900;
+
+    border: none;
+
+    color: #111;
+
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+}
+
+.formulario-stock button:hover {
+    background-color: #e6c400;
+}
+
+.mensaje-ok {
+    margin-top: 12px;
+
+    color: #7fd67f;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   TABLA DE DATOS
+========================= */
+
+.tabla-datos {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 18px;
+}
+
+.tabla-datos th,
+.tabla-datos td {
+    padding: 10px 12px;
+
+    border-bottom: 1px solid #242424;
+
+    font-size: 12px;
+
+    text-align: left;
+}
+
+.tabla-datos th {
+    color: #777;
+
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.tabla-datos tr:hover {
+    background-color: #151515;
+}
+
+.tabla-datos tr.fila-alerta td {
+    color: #ffd900;
+}
+
+.accion-eliminar {
+    color: #d66666;
+
+    font-size: 11px;
+
+    text-decoration: none;
+}
+
+.accion-eliminar:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   LISTA DE ALERTAS (PANEL)
+========================= */
+
+.lista-alertas {
+    list-style: none;
+
+    padding: 15px;
+
+    font-size: 10px;
+    color: #ffd900;
+}
+
+.lista-alertas li {
+    margin-bottom: 6px;
+}
+
+.mensaje-error {
+    margin-top: 12px;
+
+    color: #e06666;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   SELECTS Y LINKS EN TABLAS
+========================= */
+
+.formulario-stock select {
+    width: 100%;
+    height: 38px;
+
+    padding: 0 10px;
+
+    background-color: #0b0b0b;
+
+    border: 1px solid #303030;
+
+    color: white;
+
+    outline: none;
+}
+
+.formulario-stock select:focus {
+    border-color: #ffd900;
+}
+
+.tabla-datos select {
+    height: 28px;
+
+    padding: 0 6px;
+
+    background-color: #0b0b0b;
+
+    border: 1px solid #303030;
+
+    color: white;
+
+    font-size: 11px;
+}
+
+.tabla-datos a {
+    color: #ffd900;
+
+    font-size: 11px;
+
+    text-decoration: none;
+}
+
+.tabla-datos a:hover {
+    text-decoration: underline;
+}
+
+.tabla-datos a.accion-eliminar {
+    color: #d66666;
+}
