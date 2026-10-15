@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    background-color: #0d0d0d;
+
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* CONTENEDOR */
+
+.login-container {
+    width: 380px;
+
+    padding: 40px;
+
+    background-color: #111111;
+
+    border: 1px solid #292929;
+}
+
+
+/* LOGO */
+
+.logo {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.logo-cuadro {
+    width: 45px;
+    height: 45px;
+
+    margin: 0 auto 12px;
+
+    background-color: #ffd900;
+
+    color: #111111;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo h1 {
+    font-size: 25px;
+
+    letter-spacing: 4px;
+}
+
+.logo span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #777;
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+}
+
+
+/* TITULO */
+
+.titulo {
+    margin-bottom: 25px;
+}
+
+.titulo span {
+    color: #777;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+}
+
+.titulo h2 {
+    margin-top: 6px;
+
+    font-size: 20px;
+
+    letter-spacing: 1px;
+}
+
+
+/* FORMULARIO */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 7px;
+
+    color: #888;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+input {
+    height: 42px;
+
+    margin-bottom: 20px;
+
+    padding: 0 12px;
+
+    background-color: #0b0b0b;
+
+    border: 1px solid #303030;
+
+    color: white;
+
+    outline: none;
+}
+
+input:focus {
+    border-color: #ffd900;
+}
+
+input::placeholder {
+    color: #555;
+}
+
+
+/* ERROR */
+
+.error {
+    margin-top: -5px;
+    margin-bottom: 15px;
+
+    color: #d6b900;
+
+    font-size: 11px;
+}
+
+
+/* BOTON */
+
+button {
+    height: 43px;
+
+    margin-top: 5px;
+
+    background-color: #ffd900;
+
+    border: none;
+
+    color: #111;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e6c400;
+}
+
+
+/* PIE */
+
+.pie {
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #292929;
+
+    color: #555;
+
+    text-align: center;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+}
